@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jonathanyong.popularmovies2.MovieReview"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="18dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="Reviewer"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="sans-serif"/>
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/author"
+        android:layout_alignStart="@+id/author"
+        android:layout_below="@+id/author"
+        android:layout_marginTop="12dp"
+        android:text="Review"
+        android:textSize="15sp"
+        android:paddingBottom="30dp"
+        android:textColor="@color/white"
+        android:fontFamily="casual"/>
+</RelativeLayout>

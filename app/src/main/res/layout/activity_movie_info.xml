@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="com.example.jonathanyong.popularmovies2.MovieInfo">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/moviePoster"
+        android:layout_width="180dp"
+        android:layout_height="260dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="24dp"
+        android:adjustViewBounds="true"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/moviePoster"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@+id/moviePoster"
+        android:layout_toRightOf="@+id/moviePoster"
+        android:text="Title"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/title"
+        android:layout_alignStart="@+id/title"
+        android:layout_below="@+id/title"
+        android:text="Rating"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/popularity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rating"
+        android:layout_alignStart="@+id/rating"
+        android:layout_below="@+id/rating"
+        android:text="Popularity"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/overviewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/moviePoster"
+        android:layout_alignStart="@+id/moviePoster"
+        android:layout_below="@+id/moviePoster"
+        android:layout_marginTop="20dp"
+        android:text="@string/overview"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/overview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/overviewTitle"
+        android:layout_alignStart="@+id/overviewTitle"
+        android:layout_below="@+id/overviewTitle"
+        android:layout_marginTop="11dp"
+        android:text="Overview Text"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/overview"
+        android:layout_marginTop="33dp"
+        android:divider="#ffffff" />
+
+    <ImageView
+        android:id="@+id/buttonFav"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_alignLeft="@+id/popularity"
+        android:layout_alignStart="@+id/popularity"
+        android:layout_below="@+id/popularity"
+        android:onClick="setFavourite"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/whitestar" />
+
+    <Button
+        android:id="@+id/buttonReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonFav"
+        android:layout_alignStart="@+id/buttonFav"
+        android:layout_below="@+id/buttonFav"
+        android:onClick="buttonReviews"
+        android:text="Reviews" />
+
+    <TextView
+        android:id="@+id/trailerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/overview"
+        android:text="Trailers"
+        android:layout_alignStart="@+id/overview"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:fontFamily="sans-serif-condensed"/>
+  </RelativeLayout>
+
+</ScrollView>
